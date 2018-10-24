@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Lesson 6 - Age Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script>
+        function runTest()
+        {
+            // Variables
+            var month, age, day, year, today, zodiacSign;
+            var zod_signs = ["Capricorn" , "Aquarius", "Pisces", "Aries",
+                "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio",
+                "Sagittarius"];
+
+            // Converting month string into a number
+            if (document.getElementById("monthOfBirth").value == "January"){
+                month = 0;
+            }
+            if (document.getElementById("monthOfBirth").value == "February"){
+                month = 1;
+            }
+            if (document.getElementById("monthOfBirth").value == "March"){
+                month = 2;
+            }
+            if (document.getElementById("monthOfBirth").value == "April"){
+                month = 3;
+            }
+            if (document.getElementById("monthOfBirth").value == "May"){
+                month = 4;
+            }
+            if (document.getElementById("monthOfBirth").value == "June"){
+                month = 5;
+            }
+            if (document.getElementById("monthOfBirth").value == "July"){
+                month = 6;
+            }
+            if (document.getElementById("monthOfBirth").value == "August"){
+                month = 7;
+            }
+            if (document.getElementById("monthOfBirth").value == "September"){
+                month = 8;
+            }
+            if (document.getElementById("monthOfBirth").value == "October"){
+                month = 9;
+            }
+            if (document.getElementById("monthOfBirth").value == "November"){
+                month = 10;
+            }
+            if (document.getElementById("monthOfBirth").value == "December"){
+                month = 11;
+            }
+
+            // Converting input values into a date type
+            birthday = new Date();
+            day = document.getElementById("dayOfBirth").value;
+            year = document.getElementById("yearOfBirth").value;
+
+            // Calculating age
+            today = new Date();
+            age = today.getFullYear() - year;
+            if ((today.getMonth() < month) || (today.getMonth() == month && today.getDate() < day)){
+                age--;
+            }
+
+            // Calculating Zodiac Sign
+            switch(month)
+            {
+                case 0: {//January
+                    if(day < 20)
+                        zodiacSign = zod_signs[0];
+                    else
+                        zodiacSign = zod_signs[1];
+                }break;
+                case 1: {//February
+                    if(day < 19)
+                        zodiacSign = zod_signs[1];
+                    else
+                        zodiacSign = zod_signs[2];
+                }break;
+                case 2: {//March
+                    if(day < 21)
+                        zodiacSign = zod_signs[2];
+                    else
+                        zodiacSign = zod_signs[3];
+                }break;
+                case 3: {//April
+                    if(day < 20)
+                        zodiacSign = zod_signs[3];
+                    else
+                        zodiacSign = zod_signs[4];
+                }break;
+                case 4: {//May
+                    if(day < 21)
+                        zodiacSign = zod_signs[4];
+                    else
+                        zodiacSign = zod_signs[5];
+                }break;
+                case 5: {//June
+                    if(day < 21)
+                        zodiacSign = zod_signs[5];
+                    else
+                        zodiacSign = zod_signs[6];
+                }break;
+                case 6: {//July
+                    if(day < 23)
+                        zodiacSign = zod_signs[6];
+                    else
+                        zodiacSign = zod_signs[7];
+                }break;
+                case 7: {//August
+                    if(day < 23)
+                        zodiacSign = zod_signs[7];
+                    else
+                        zodiacSign = zod_signs[8];
+                }break;
+                case 8: {//September
+                    if(day < 23)
+                        zodiacSign = zod_signs[8];
+                    else
+                        zodiacSign = zod_signs[9];
+                }break;
+                case 9: {//October
+                    if(day < 23)
+                        zodiacSign = zod_signs[9];
+                    else
+                        zodiacSign = zod_signs[10];
+                }break;
+                case 10: {//November
+                    if(day < 22)
+                        zodiacSign = zod_signs[10];
+                    else
+                        zodiacSign = zod_signs[11];
+                }break;
+                case 11: {//December
+                    if(day < 22)
+                        zodiacSign = zod_signs[11];
+                    else
+                        zodiacSign = zod_signs[0];
+                }break;
+            }
+
+            // Presenting results
+            document.getElementById("age").innerHTML = age;
+            document.getElementById("zodiacSign").innerHTML = zodiacSign;
+        }
+    </script>
+
+</head>
+
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>Lesson 6 - Age Calculator</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your data</span>
+            </h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Age</h6>
+                    </div>
+                    <span class="text-muted" id="age"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Zodiac Sign</h6>
+                    </div>
+                    <span class="text-muted" id="zodiacSign"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Enter your information</h4>
+            <form>
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label>Day of Birth</label>
+                        <select class="custom-select d-block w-100" id="dayOfBirth">
+                            <option value="">Choose...</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Month of Birth</label>
+                        <select class="custom-select d-block w-100" id="monthOfBirth" >
+                            <option value="">Choose...</option>
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Year of Birth</label>
+                        <input type="text" class="form-control" id="yearOfBirth" placeholder="" value="">
+                    </div>
+                </div>
+
+
+
+
+
+                <hr class="mb-4">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="calculate" onclick="runTest()">Calculate</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2018 The Cool Company</p>
+    </footer>
+</div>
+</body>
+</html>
