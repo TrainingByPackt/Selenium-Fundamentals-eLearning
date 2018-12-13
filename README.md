@@ -32,8 +32,8 @@ For an optimal student experience, we recommend the following hardware configura
 
 ### Software requirements
 You’ll also need the following software installed in advance:
-* Operating System: Windows 7 or Windows 10
-* Browser: Google Chrome, Latest Version
+* **Operating System**: Windows 7 or Windows 10
+* **Browser**: Google Chrome, Latest Version
 * Selenium WebDriver
 * Google Chrome Driver
 * IntelliJ IDEA
