@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Lesson 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript">
+        function showSimpleAlert()
+        {
+            alert("Welcome! This is a simple alert. Press 'Accept' to continue");
+            showConfirmAlert();
+        }
+
+        function showConfirmAlert()
+        {
+            var title;
+            var accepted = confirm("This is a confirm alert. Do you want to accept or cancel?");
+            if (accepted === true)
+                title = "Alert accepted";
+            else
+                title = "Alert Dismissed";
+            document.getElementsByTagName("TITLE")[0].text = title;
+            showPromptAlert();
+        }
+
+        function showPromptAlert()
+        {
+            var x;
+
+            var language = prompt("What's your favorite programming language","");
+
+            if (language != null)
+            {
+                title = language + " is a great programming language";
+                document.getElementsByTagName("TITLE")[0].text = title;
+            }
+        }
+    </script>
+
+</head>
+<frameset rows="20%,90%" FRAMEBORDER="NO" FRAMESPACING="0" BORDER="0" onload="showSimpleAlert()">
+    <frame id="title" src="frame0.html">
+    <frameset cols="80%,20%">
+        <frame id="info" src="frame1.html">
+        <frame id="twitter" src="frame2.html">
+    </frameset>
+</frameset>
+
+</html>

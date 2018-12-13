@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testngExample">
+    <test name="giganticStoreTest">
+        <classes>
+            <class name="com.beginningselenium.examples.tests.GiganticStoreTest" />
+            <class name="com.beginningselenium.examples.tests.OnlineStoreTest" />
+        </classes>
+    </test>
+</suite>

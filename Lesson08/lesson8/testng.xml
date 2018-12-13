@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testngExample">
+    <test name="giganticStoreTest">
+        <classes>
+            <class name="com.beginningselenium.examples.tests.Activity8_B1_FirstState" />
+            <class name="com.beginningselenium.examples.tests.Activity8_B1_SecondState" />
+            <class name="com.beginningselenium.examples.tests.Activity8_B1_ThirdState" />
+            <class name="com.beginningselenium.examples.tests.Activity8_B1_FourthState" />
+            <class name="com.beginningselenium.examples.tests.GiganticStoreTest" />
+        </classes>
+    </test>
+</suite>

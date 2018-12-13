@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Lección 3 - Formulario</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <h10><a href="activity_3_D-1.html">English</a></h10>
+        <h2>Lección 3 - Formulario</h2>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Ingrese su información</h4>
+            <form>
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label>Primer nombre</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Apellido</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="">
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+                        <label>Día de nacimiento</label>
+                        <select class="custom-select d-block w-100" id="dayOfBirth">
+                            <option value="">Elija...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Mes de nacimiento</label>
+                        <select class="custom-select d-block w-100" id="monthOfBirth" >
+                            <option value="">Elija...</option>
+                            <option value="january">Enero</option>
+                            <option value="february">Febrero</option>
+                            <option value="march">Marzo</option>
+                            <option value="april">Abril</option>
+                            <option value="may">Mayo</option>
+                            <option value="june">Junio</option>
+                            <option value="july">Julio</option>
+                            <option value="august">Agosto</option>
+                            <option value="september">Septiembre</option>
+                            <option value="october">Octubre</option>
+                            <option value="november">Noviembre</option>
+                            <option value="december">Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Año de nacimiento</label>
+                        <input type="text" class="form-control" id="yearOfBirth" placeholder="" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Pasatiempos</label><br>
+                        <select name="hobbies" multiple id="hobbies">
+                            <option value="reading">Leer</option>
+                            <option value="watching TV">Ver TV</option>
+                            <option value="sports">Deportes</option>
+                            <option value="traveling">Viajar</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Su título académico más alto</label><br>
+                        <input type="radio" name="degree" id="degree" value="highSchool">Bachiller<br>
+                        <input type="radio" name="degree" id="degree" value="bachelor">Título universitario<br>
+                        <input type="radio" name="degree" id="degree" value="masters">Maestría<br>
+                        <input type="radio" name="degree" id="degree" value="PhD">Doctorado<br>
+                        <input type="radio" name="degree" id="degree" value="postDoc"> Post Doctorado
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <input type="checkbox" name="emailUpdates" id="emailUpdates" value="receiveEmails"> Quiero recibir información en mi correo electrónico<br>
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+                        <label>Cuéntenos algo sobre usted</label>
+                        <textarea id="aboutYourself" rows="4" cols="73" placeholder="" value=""></textarea>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
