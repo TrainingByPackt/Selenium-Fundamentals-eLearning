@@ -10,7 +10,7 @@ public class BrowserCheck {
 		 * Place here the path where ChromeDriver is on your computer E.g.
 		 * c:\\browserdrivers\\chromedriver.exe
 		 */
-		String chromeDriverPath = "G:\\kuldeep freelancing\\drivers\\chromedriver.exe";
+		String chromeDriverPath = "./Driver/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 		WebDriver webDriver = new ChromeDriver();
 
