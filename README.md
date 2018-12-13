@@ -24,8 +24,8 @@ After writing your first tests, you will go through the object model to help cre
 ### Hardware requirements
 For an optimal student experience, we recommend the following hardware configuration:
 * **Processor**: Intel Core i5 or equivalent
-* **Memory**: 8GB RAM
-* **Hard disk**: 4 GB available space
+* **Memory**: 8 GB RAM
+* **Hard disk**: 40 GB available space
 * An Internet connection
 
 
